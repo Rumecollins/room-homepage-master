@@ -1,0 +1,271 @@
+/* root setting of variable */
+
+:root{
+    --section-spacing:3.5rem;
+    --padding-spacer-300:1rem;
+    --padding-spacer-400:1.5rem;
+    --padding-spacer-500:2rem;
+
+    --margin-gap-400:1em;
+    --margin-gap-500:2em;
+    --margin-gap-600:3em;
+
+    --border-radius-300:1rem ;
+    --border-radius-400:1.5rem ;
+
+
+    --color-primary:#777676;
+    --color-neutral-900:#000;
+    --color-neutral-100:#fff;
+    --color-hover:#434343;
+
+    --box-shadow: 0 0 1em rgba(102, 60, 180, 0.15);
+
+    --font-size-300: .8rem;
+    --font-size-500: 1rem;
+    --font-size-900: 1.5rem;
+    
+    --font-weight-500: 300;
+    --font-weight-500: 500;
+    --font-weight-700: 700;
+
+    --font-family-heading: var(--font-family-primary);
+    --font-family-body: var(--font-family-secondry);
+
+}
+
+/* media quary */
+
+@media (min-width: 45em) {
+  :root{
+    --font-size-heading:var(--font-size-500);
+    --font-size-body:var(--font-size-300);
+    --font-size-nav:var(--font-size-300);
+    --font-size-button:var(--font-size-500);
+  }
+}
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin, paddling and font */
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.3;
+}
+
+/*reset height for body and html*/
+
+html,
+body{
+    min-height: 100%;
+}
+
+/* A elements that don't have a class get default styles */
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions
+ and smooth scroll for people that
+prefer not to see them */
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* utility class */
+.container{
+    width: 90%;
+    margin: 2em auto;
+    background-color: var(--color-neutral-100);
+}
+.margin-top{
+  margin-top: 4em;
+}
+.even-colums{
+    display: flex;
+}
+
+/* Component */
+
+button{
+    display: flex;
+    background-color: transparent;
+    border: 0px;
+    padding: .2em;
+    font-size: .9em;
+    color: var(--color-primary);
+}
+
+.img-button{
+  padding-left: 1em;
+  margin-top: .2em;
+  width: 3.5em;
+}
+
+
+/* General styling */
+body{
+  background-color: rgb(243, 236, 236);
+  color: var(--color-primary);
+  font-size: var(--font-size-300);
+  font-weight: var(--font-weight-500);
+  line-break: auto;
+}
+
+h1,
+h2{
+  color: var(--color-neutral-900);
+}
+
+.navigation{
+    position: absolute;
+    top: 95px;
+    left: 75px;
+}
+@media screen and (min-width:60em) {
+  .navigation{
+    top: 95px;
+    left: 120px;
+  }
+}
+.logo{
+  margin: .2em .5em;
+}
+
+.nav-iteams{
+  margin-left: 2em;
+}
+
+.nav-iteams a {
+  text-decoration: none;
+  color:var(--color-neutral-100);
+}
+
+.page{
+  flex-direction: column;
+}
+.landing-page{
+  width: 100%;
+  height: 55vh;
+}
+
+.landing-page-botton{
+  width: 100%;
+  height: 25vh
+}
+.landing-page-bg{
+  width: 60%;
+  height: 55vh;
+}
+.landing-page-img{
+  width: 100%;
+  height: 100%;
+}
+
+.landing-page-aside{
+  width: 40%;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aside-button{
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+.aside-text-section{
+  width: 70%;
+}
+.h1{
+  font-size: var(--font-size-900);
+  margin-top: -1em;
+  font-weight: var(--font-weight-700);
+}
+.aside-paragraph{
+  color: var(--color-primary);
+}
+.next,
+.provice{
+  max-width: 4.8em;
+  padding: 1.5em 2em;
+  background-color: var(--color-neutral-900);
+  color: var(--color-primary);
+}
+
+.about-section{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30%;
+  height: inherit;
+}
+
+.image-about-dark{
+  background-image: url("./images/image-about-dark.jpg");
+}
+.image-about-light{
+  background-image: url("./images/image-about-light.jpg");
+}
+
+.bottom-text-section{
+  padding: 1.5em 3em;
+  width: 40%;
+}
+
+h2{
+  font-size: var(--font-size-500);
+}
+
+footer{
+  margin-top: 2em;
+}
