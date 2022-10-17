@@ -17,11 +17,14 @@
   <header>
     <div class="container">
       <div class="navigation | even-colums ">
+        <div id="menu-icon" class="menu-icon">
+          <img src="./images/icon-hamburger.svg" alt="">
+        </div>
         <div class="logo" aria-labelledby="logo">
           <img src="./images/logo.svg" alt="">
         </div>
-        <nav class="nav-bar">
-          <ul aria-labelledby="nav list" class= "even-colums" role='list'>
+        <nav id="nav-list" class="nav-bar">
+          <ul  aria-labelledby="nav list" aria-visible="false " class= "even-colums nav-list display" role='list'>
             <li class="nav-iteams" > <a href=""> Home </a></li>
             <li class="nav-iteams" > <a href=""> Shop </a></li>
             <li class="nav-iteams" > <a href=""> About </a></li>
@@ -32,11 +35,15 @@
     </div>
   </header>
   <main>
-    <div class="container margin-top">
+    <div class="container">
       <div class=" page even-colums">
         <div class="landing-page even-colums">
-          <div id="landing-page-bg" class="landing-page-bg">
-            <img class="landing-page-img" src="./images/desktop-image-hero-1.jpg" alt="">
+          <div id="landing-page-bg" class="landing-page-bg ">
+            <img class="landing-page-img " src="./images/desktop-image-hero-1.jpg" alt="">
+            <div class="button-positioner right even-colums">
+              <div id="mobileProviceBtn" class="provice-mobile-btn "> <img src="./images/icon-angle-left-mobile.svg" alt="" ></div>
+              <div id="mobileNextBtn" class="next-mobile-btn " > <img src="./images/icon-angle-right-mobile.svg" alt="" ></div>
+            </div>
           </div>
           <div class="landing-page-aside even-colums">
             <div class="aside-text-section">
@@ -48,17 +55,17 @@
               </p>
               <button>SHOP NOW <img class="img-button" src="./images/icon-arrow.svg" alt=""></button>
             </div>
-            <div class="aside-button even-colums">
-              <div class="provice"> <img src="./images/icon-angle-left.svg" alt="" srcset=""></div>
-              <div class="next"> <img src="./images/icon-angle-right.svg" alt="" srcset=""></div>
+            <div class="button-positioner left even-colums">
+              <div class="provice-btn a"> <img src="./images/icon-angle-left.svg" alt="" srcset=""></div>
+              <div class="next-btn b"> <img src="./images/icon-angle-right.svg" alt="" srcset=""></div>
             </div>  
           </div>
         </div>
-        <div class="landing-page-botton even-colums">
+        <div class="landing-page-bottom even-colums">
           <div class="about-section image-about-dark"></div>
           <div class="about-section bottom-text-section">
-            <h2>About our furniture </h2>
-            <p>
+            <h2 class="text-width">About our furniture </h2>
+            <p class="text-width">
               Our multifunctional collection blends design and function to suit
               your individual taste. Make each room unique, or pick a cohesive theme that
               best express your interests and what inspires you. Find the furniture

@@ -1,5 +1,21 @@
+/** mobile menu    ***/
+let menuIcon = document.getElementById("menu-icon")
+let navBar = document.getElementById("nav-bar")
+
+menuIcon.addEventListener("click",function() {
+
+})
+
+
+
+
 let landingPageBg = document.getElementById("landing-page-bg");
-let next = document.querySelector(".next");
+let nextBtn = document.querySelector(".next-btn");
+let mobileNextBtn = document.getElementById("mobileNextBtn")
+let proviceBtn = document.querySelector(".provice-btn");
+let mobileProviceBtn = document.getElementById("mobileProviceBtn")
+
+
 
 let h1Array = [
     "Discover innovative ways to decorate",
@@ -30,28 +46,7 @@ let images = [
 
 let i = 0;
 
-next.addEventListener("click",function(){
-    let h1 = document.querySelector(".h1")
-    let paragraph = document.querySelector(".paragraph")
-    let slider = document.querySelector(".landing-page-img")
-
-    i ++
-
-    if (i >= h1Array.length ){
-        h1.textContent = h1Array[0]
-        paragraph.textContent = paragraphArray[0]
-        slider.src = images[0]
-        i = 0
-    } else {
-        h1.textContent = h1Array[i]
-        paragraph.textContent = paragraphArray[i]
-        slider.src = images[i]
-    }
-});  
-
-let provice = document.querySelector(".provice")
-
-provice.addEventListener("click",function(){
+function prov() {
     let h1 = document.querySelector(".h1")
     let paragraph = document.querySelector(".paragraph")
     let slider = document.querySelector(".landing-page-img")
@@ -68,4 +63,38 @@ provice.addEventListener("click",function(){
         paragraph.textContent = paragraphArray[i]
         slider.src = images[i]
     }
-});     
+}
+
+function next(){
+    let h1 = document.querySelector(".h1")
+    let paragraph = document.querySelector(".paragraph")
+    let slider = document.querySelector(".landing-page-img")
+
+    i ++
+
+    if (i >= h1Array.length ){
+        h1.textContent = h1Array[0]
+        paragraph.textContent = paragraphArray[0]
+        slider.src = images[0]
+        i = 0
+    } else {
+        h1.textContent = h1Array[i]
+        paragraph.textContent = paragraphArray[i]
+        slider.src = images[i]
+    }
+}
+
+nextBtn.addEventListener("click",function(){
+    next()
+}); 
+
+mobileNextBtn.addEventListener("click",function(){
+    next()
+})
+
+proviceBtn.addEventListener("click",function(){
+    prov()
+});
+mobileProviceBtn.addEventListener("click",function () {
+    prov()
+});
