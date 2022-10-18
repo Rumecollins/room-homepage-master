@@ -391,6 +391,11 @@ h2{
   display: none;
 }
 
+.btn-hover:hover,
+.btn-hover:focus-within{
+  background-color: var(--color-hover);
+}
+
 @media screen and (min-width:45em){
   .next-mobile-btn,
   .provice-mobile-btn{
@@ -450,6 +455,14 @@ h2{
 
 h2{
   font-size: var(--font-size-500);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
 }
 
 footer{
