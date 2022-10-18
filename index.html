@@ -14,18 +14,19 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="container">
+  <header class="Primary-navigtion">
+    <div class="container margin-top">
       <div class="navigation | even-colums ">
-        <div id="menu-icon" class="menu-icon">
-          <img src="./images/icon-hamburger.svg" alt="">
+        <div id="toggle-icon" class="menu-icon">
+          <img class="icon-hamburger" src="./images/icon-hamburger.svg" alt="" data-visible="true">
+          <img class="icon-close" src="./images/icon-close.svg" alt="" data-visible="false">
         </div>
         <div class="logo" aria-labelledby="logo">
           <img src="./images/logo.svg" alt="">
         </div>
-        <nav id="nav-list" class="nav-bar">
-          <ul  aria-labelledby="nav list" aria-visible="false " class= "even-colums nav-list display" role='list'>
-            <li class="nav-iteams" > <a href=""> Home </a></li>
+        <nav class="nav-bar">
+          <ul id="nav-list" aria-labelledby="nav list" data-visible="false" class= "even-colums nav-list" role='list'>
+            <li class="nav-iteams black" > <a  href=""> Home </a></li>
             <li class="nav-iteams" > <a href=""> Shop </a></li>
             <li class="nav-iteams" > <a href=""> About </a></li>
             <li class="nav-iteams" > <a href=""> Contact </a></li>

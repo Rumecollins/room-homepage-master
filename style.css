@@ -13,9 +13,9 @@
     --border-radius-300:1rem ;
     --border-radius-400:1.5rem ;
 
-
+    --color-accent:#000;
     --color-primary:#777676;
-    --color-neutral-900:#000;
+    --color-neutral-900:#111;
     --color-neutral-100:#fff;
     --color-hover:#434343;
 
@@ -127,7 +127,7 @@ prefer not to see them */
   .container{
     width: 90%;
     margin: 8em auto;
-    background-color: var(--color-neutral-100);
+    background-color: #fff;
 }
 }
 .even-colums{
@@ -171,7 +171,7 @@ body{
 
 h1,
 h2{
-  color: var(--color-neutral-900);
+  color: var(--color-accent);
 }
 
 .navigation{
@@ -183,6 +183,11 @@ h2{
 
 .nav-list{
   flex-direction: row;
+}
+
+.nav-iteams a {
+  text-decoration: none;
+  color:var(--color-neutral-100);
 }
 
 
@@ -207,6 +212,18 @@ h2{
     right: 0;
   }
 
+  .Primary-navigtion[date-overlay]::after{
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, .6));
+  }
+
+  [data-visible="false"]{
+    display: none;
+  }
+  
+
   .logo{
     position: relative;
     z-index: 10;
@@ -215,6 +232,9 @@ h2{
   }
 
   .menu-icon{
+
+   padding: 0.2em;
+   box-shadow:0 .1em 1.5em rgba(0, 0, 0, 0.5); 
    position: fixed;
    top: 3em;
    left: 2em;
@@ -222,17 +242,25 @@ h2{
   }
 
   .nav-list{
-    background-color: #000;
-    position: absolute;
+    background-color:#fff;
+    position: fixed;
     padding-block: 3em;
     justify-content: flex-end;
     padding-right: 2em;
     z-index: 100;
     right: 0;
     left: 0;
-    }
+  }
 
-    .display{
+
+  .nav-iteams a {
+    color:#000
+  }
+    
+    .black{
+      color:var(--color-neutral-900);
+    }
+    .nav-list[data-visible="false"]{
       display: none;
     }
 }
@@ -241,19 +269,12 @@ h2{
   .menu-icon{
     display: none;
   }
-  
 }
-
-
 
 .nav-iteams{
   margin-left: 2em;
 }
 
-.nav-iteams a {
-  text-decoration: none;
-  color:var(--color-neutral-100);
-}
 .landing-page{
   width: 100%;
   height: 55vh;
@@ -271,6 +292,7 @@ h2{
   height: 75vh;
 }
 .landing-page-bg{
+  margin-top: -1em;
   width: 100%;
   height: 55vh;
   position: relative;
@@ -292,7 +314,8 @@ h2{
   }
   .landing-page-bg{
     width: 60%;
-    height: 55vh
+    height: 55vh;
+    margin-top: 0;
   }     
 }
 
@@ -305,9 +328,10 @@ h2{
   align-items: center;
 }
 
-@media screen and (min-width:25em){
+@media screen and (min-width:31em){
   .landing-page-aside{
-    min-height: 20em;
+    min-height: 30em;
+    padding-top: 0px;
   }   
 }
 
@@ -333,9 +357,15 @@ h2{
 }
 .aside-text-section{
   width: 85%;
+  }
+@media (min-width:32em) and (max-width:45em){
+  .aside-text-section{
+    margin-top: -20em;
+    width: 90%;
+  }  
 }
 
-@media screen and (min-with:52em){
+@media screen and (min-width:52em){
   .aside-text-section{
     width: 70%;
   }  
@@ -352,7 +382,7 @@ h2{
 .provice-mobile-btn{
   max-width: 4.8em;
   padding: 1.5em 2em;
-  background-color: var(--color-neutral-900);
+  background-color:var(--color-accent);
   color: var(--color-primary);
 }
 
@@ -372,7 +402,7 @@ h2{
     display: block;
     max-width: 4.8em;
     padding: 1.5em 2em;
-    background-color: var(--color-neutral-900);
+    background-color: var(--color-accent);
     color: var(--color-primary);
   }
 }

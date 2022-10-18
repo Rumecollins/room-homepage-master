@@ -1,10 +1,34 @@
 /** mobile menu    ***/
-let menuIcon = document.getElementById("menu-icon")
-let navBar = document.getElementById("nav-bar")
+let PrimaryNavigtion = document.querySelector(".Primary-navigtion")
+let navToggle = document.getElementById("toggle-icon")
+let navList= document.getElementById("nav-list")
 
-menuIcon.addEventListener("click",function() {
+let iconHamburger = document.querySelector(".icon-hamburger");
+let iconClose = document.querySelector(".icon-close")
 
+
+navToggle.addEventListener("click", () => {
+    PrimaryNavigtion.toggleAttribute("date-overlay")
+
+    let visibility = navList.getAttribute("data-visible");
+
+    if (visibility === "false"){
+       navList.setAttribute("data-visible","true");
+
+       iconHamburger.setAttribute("data-visible","false");
+       iconClose.setAttribute("data-visible","true");
+    
+       console.log("");
+    } else {
+        navList.setAttribute("data-visible","false");
+
+        iconHamburger.setAttribute("data-visible","true");
+        iconClose.setAttribute("data-visible","false");
+
+        console.log("");
+    }
 })
+
 
 
 
