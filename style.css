@@ -122,14 +122,24 @@ prefer not to see them */
 }
 
 /* utility class */
+.container{
+  background-color: #fff;
+}
 
 @media screen and (min-width:45em) {
   .container{
     width: 90%;
     margin: 8em auto;
-    background-color: #fff;
+ }
 }
+
+@media (min-width:45em) and (max-width:69em) {
+  .container{
+    width: 98%;
+ }
 }
+
+
 .even-colums{
     display: flex;
     flex-direction: column;
@@ -163,10 +173,27 @@ body{
   z-index: -10;
 }
 
-@media (min-width:45em) {
+@media (min-width:32em) {
   body{
     background-color: rgb(243, 236, 236);
   }
+}
+
+.img-mobile{
+  display: block;
+}
+.img-desktop{
+  display: none;
+}
+
+@media screen and (min-width:45em) {
+  .img-mobile{
+    display: none;
+  }
+  .img-desktop{
+    display: block;
+  }  
+  
 }
 
 h1,
@@ -268,7 +295,8 @@ h2{
 @media screen and (min-width:45em) {
   .menu-icon{
     display: none;
-  }
+
+      }
 }
 
 .nav-iteams{
@@ -289,9 +317,10 @@ h2{
 .landing-page-bottom{
   margin-top: 6em;
   width: 100%;
-  height: 75vh;
 }
 .landing-page-bg{
+  background-size: cover; 
+  background-position: center;
   margin-top: -1em;
   width: 100%;
   height: 55vh;
@@ -301,7 +330,7 @@ h2{
 .landing-page-img{
   width: 100%;
   height: 100%;
-  position: relative;
+  position: absolute;
   z-index:-0 ;
 }
 
@@ -322,7 +351,7 @@ h2{
 .landing-page-aside{
   padding-top: 2em;
   width: 100%;
-  min-height: 16.5em;
+  min-height: 45%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -330,13 +359,14 @@ h2{
 
 @media screen and (min-width:31em){
   .landing-page-aside{
-    min-height: 30em;
-    padding-top: 0px;
+    min-height: 30%;
+    padding-top: 10px;
   }   
 }
 
 @media screen and (min-width:45em){
   .landing-page-aside{
+    font-size: var(--font-size-300);
     width: 40%;
     height: 100%;
     padding-top: 0px;
@@ -347,7 +377,7 @@ h2{
 .button-positioner{
   flex-direction: row;
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
 }
 .right{
   right: 0px;
@@ -357,17 +387,35 @@ h2{
 }
 .aside-text-section{
   width: 85%;
+  padding-top: 3em;
   }
 @media (min-width:32em) and (max-width:45em){
-  .aside-text-section{
-    margin-top: -20em;
+  body{
+    padding-top: 2em;
+  }
+  .container{
     width: 90%;
-  }  
+    margin: 0 auto;
+  }
+  .nav-list{
+    top: 1.8em;
+    left: 1.7em;
+    right: 1.7em;
+  }
+  .aside-text-section,
+  .bottom-text-section{
+    font-size: var(--font-size-500);
+    width: 90%;
+  } 
+  .menu-icon{
+    top: 4.5em;
+    left: 5em;
+  }
 }
 
 @media screen and (min-width:52em){
   .aside-text-section{
-    width: 70%;
+    width: 80%;
   }  
 }
 .h1{
@@ -436,13 +484,15 @@ h2{
 }
 
 .bottom-text-section{
-  padding: 2em;
+  padding: 1em;
+
 }
 
 @media screen and (min-width:45em) {
   .bottom-text-section{
-    padding: 1.2em 2em;
+    padding: 1.5em 2em;
     width: 40%;
+    
   }  
 }
 @media screen and (min-width:52em) {
@@ -452,10 +502,10 @@ h2{
 }
 
 
-
 h2{
   font-size: var(--font-size-500);
-}
+}  
+
 
 .attribution {
   font-size: 11px;
